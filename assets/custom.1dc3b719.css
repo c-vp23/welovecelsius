@@ -1,0 +1,570 @@
+/** Shopify CDN: Minification failed
+
+Line 161:12 Unexpected "{"
+Line 161:21 Expected ":"
+Line 265:12 Unexpected "{"
+Line 265:21 Expected ":"
+
+**/
+/* Custom ordering for mobile - as specified */
+/* For featured collection on homepage */
+@media screen and (max-width: 749px) {
+  /* Custom ordering for homepage featured collection */
+  slider-component ul.product-grid li#Slide-featured-collection-1,
+  slider-component ul.product-grid li#Slide-featured-1 {
+    order: 1 !important;
+  }
+  
+  slider-component ul.product-grid li#Slide-featured-collection-2,
+  slider-component ul.product-grid li#Slide-featured-2 {
+    order: 3 !important;
+  }
+  
+  slider-component ul.product-grid li#Slide-featured-collection-3,
+  slider-component ul.product-grid li#Slide-featured-3 {
+    order: 5 !important;
+  }
+  
+  slider-component ul.product-grid li#Slide-featured-collection-4,
+  slider-component ul.product-grid li#Slide-featured-4 {
+    order: 2 !important;
+  }
+  
+  slider-component ul.product-grid li#Slide-featured-collection-5,
+  slider-component ul.product-grid li#Slide-featured-5 {
+    order: 4 !important;
+  }
+  
+  slider-component ul.product-grid li#Slide-featured-collection-6,
+  slider-component ul.product-grid li#Slide-featured-6 {
+    order: 6 !important;
+  }
+  
+  /* Force flex properties to enable ordering */
+  slider-component ul.product-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+  
+  /* Custom ordering for collection pages */
+  .collection .product-grid li.grid__item:nth-child(1) {
+    order: 1 !important;
+  }
+  
+  .collection .product-grid li.grid__item:nth-child(2) {
+    order: 3 !important;
+  }
+  
+  .collection .product-grid li.grid__item:nth-child(3) {
+    order: 5 !important;
+  }
+  
+  .collection .product-grid li.grid__item:nth-child(4) {
+    order: 2 !important;
+  }
+  
+  .collection .product-grid li.grid__item:nth-child(5) {
+    order: 4 !important;
+  }
+  
+  .collection .product-grid li.grid__item:nth-child(6) {
+    order: 6 !important;
+  }
+  
+  /* Force flex for collection pages too */
+  .collection .product-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+}
+/* Footer menu spacing fix for mobile */
+@media screen and (max-width: 749px) {
+  /* Target the specific list menu items */
+  .link.link--text.list-menu__item.list-menu__item--link {
+    padding-left: 16px !important;
+  }
+  
+  /* Target the footer block heading */
+  .footer-block__heading {
+    padding-left: 16px !important;
+  }
+  
+  /* Target the footer blocks wrapper */
+  .footer__blocks-wrapper {
+    padding-left: 0; /* Reset any existing padding */
+  }
+  
+  /* Add spacing to the join us here text */
+  .footer-block--newsletter {
+    padding-left: 16px !important;
+  }
+}
+/* Product page mobile padding fix */
+@media screen and (max-width: 749px) {
+  /* Target the product info container */
+  .product__info-container,
+  product-info,
+  .product__info-wrapper,
+  .product-form__input,
+  .product__description,
+  h1.product__title,
+  .price,
+  .product__tax,
+  .quantity__label,
+  variant-radios,
+  .product-form__buttons,
+  .product-form {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Make sure quantity selector has enough space */
+  .quantity-input {
+    margin-left: 16px !important;
+  }
+  
+  /* Fix spacing for variant selectors */
+  .product-form__input .form__label {
+    padding-left: 16px !important;
+  }
+  
+  /* Target accordion tabs */
+  .product__accordion.accordion,
+  .product__accordion.accordion summary,
+  .product__accordion.accordion .accordion__content {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  /* Complete the set section */
+  .product-recommendations,
+  .complementary-products__container,
+  .complementary-slide {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  /* Fix view details link */
+  .product__view-details {
+    padding-left: 16px !important;
+    margin-left: 0 !important;
+  }
+  
+  /* Icon with text blocks */
+  .icon-with-text {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  /* Make sure parent container doesn't override our padding */
+  .section-{{ section.id }}-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+/* Restore animations for mobile devices */
+@media screen and (max-width: 749px) {
+  /* Restore animations */
+  .logo-image-in-title,
+  .announcement-bar .celsius-logo img,
+  img[alt="°C"] {
+    animation: float 5s ease-in-out infinite, shine 4s ease-in-out infinite !important;
+    transition: transform 0.3s ease !important;
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* Restore original animation keyframes */
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  @keyframes shine {
+    0% { filter: brightness(100%); }
+    50% { filter: brightness(120%); }
+    100% { filter: brightness(100%); }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+  }
+  
+  /* Restore hover effect */
+  .logo-image-in-title:hover {
+    animation: pulse 0.5s ease-in-out;
+    transform: scale(1.2);
+  }
+  
+  /* Fix title display and layout */
+  .collection__title .title {
+    display: block !important;
+    text-align: center !important;
+    margin: 1em auto !important;
+    padding: 0 1em !important;
+    line-height: 1.3 !important;
+    position: relative !important;
+  }
+  
+  /* Fix proper positioning for logo in title */
+  span[style*="margin-left: -4px"],
+  span.text-wrapper {
+    position: relative !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+  }
+  
+  /* Allow title-second-line to display properly */
+  .title-second-line {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+/* Remove padding between header and title on mobile */
+@media screen and (max-width: 749px) {
+  /* Target the collection header section */
+  .collection__title,
+  .title-wrapper,
+  h1.title,
+  h2.title,
+  .section-featured-collection-padding,
+  .section-template--NUMBER__featured-collection-padding {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  
+  /* Target the header section to remove bottom padding */
+  #shopify-section-header,
+  .shopify-section-header-hidden,
+  header.header,
+  .header-wrapper {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  
+  /* Target the first collection section to remove top padding */
+  .shopify-section:first-of-type + .shopify-section {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  
+  /* This targets the collection title specifically */
+  .collection__title h2,
+  .collection__title .title {
+    margin-top: 10px !important; /* Small top margin instead of the large one */
+    padding-top: 0 !important;
+  }
+  
+  /* Reduce section padding if needed */
+  .section-{{ section.id }}-padding {
+    padding-top: 0 !important;
+  }
+  
+  /* Fix for any page-width container that might add spacing */
+  .page-width {
+    margin-top: 0 !important;
+  }
+}
+/* Fix for white space on mobile between header and video */
+@media screen and (max-width: 749px) {
+  /* Override the body padding on pages with the video */
+  body.gradient {
+    padding-top: 0 !important;
+  }
+  
+  /* Target if it's using a class based selector */
+  html[class*="js"] body,
+  .shopify-section:first-of-type {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  
+  /* Target MainContent first section padding */
+  #MainContent > .shopify-section:first-child .section:first-of-type,
+  #MainContent > .shopify-section:first-child .video-container {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  /* Ensure header doesn't add padding */
+  .header-wrapper {
+    margin-bottom: 0 !important;
+  }
+  
+  /* Important override for any inline styles */
+  [style*="padding-top"] {
+    padding-top: 0 !important;
+  }
+  
+  /* Page-specific fix for home page with video */
+  .template-page #MainContent {
+    padding-top: 0 !important; 
+  }
+}
+/* Only apply to the specific pages that need it */
+@media screen and (max-width: 749px) {
+  /* This specifically targets the issue seen in the screenshot */
+  body {
+    padding-top: 0 !important;
+  }
+}
+/* Spread header elements to edges of the container */
+@media screen and (min-width: 990px) {
+  /* Expand header to full width */
+  .header {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+  
+  /* Pull logo slightly left */
+  .header__heading, 
+  .header__heading-link {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+  
+  /* Push icons to right edge */
+  .header__icons {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  /* Adjust space between elements */
+  .header__inline-menu {
+    padding-right: 20px !important;
+  }
+  
+  /* Use flexbox to properly distribute the elements */
+  .header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+  
+  /* Set sizes for sections */
+  .header > *:first-child {
+    flex: 0 0 auto;
+  }
+  
+  .header__inline-menu {
+    flex: 0 1 auto;
+  }
+  
+  .header__icons {
+    flex: 0 0 auto;
+  }
+}
+/* Adjust logo position - move it 50px to the right */
+@media screen and (min-width: 990px) {
+  .header__heading, 
+  .header__heading-link {
+    margin-left: 50px !important; /* Move logo 50px to the right */
+  }
+}
+/* Increase spacing between menu items on mobile */
+@media screen and (max-width: 989px) {
+  /* Add more space between individual menu items */
+  .list-menu--inline li {
+    margin-right: 5px !important; /* Increase right margin to spread items */
+  }
+  
+  /* Specifically target the last item to remove excess margin */
+  .list-menu--inline li:last-child {
+    margin-right: 0 !important;
+  }
+  
+  /* Ensure menu container has enough space */
+  .header__inline-menu {
+    width: auto !important;
+    padding: 0 5px !important;
+  }
+  
+  /* Increase the font size slightly for better visibility */
+  .header__menu-item span {
+    padding: 2px 8px !important; /* Increase horizontal padding */
+  }
+}
+/* Center product information (name and price) on mobile */
+@media screen and (max-width: 749px) {
+  /* Target product information in featured collection */
+  #Slider-featured .card-information {
+    text-align: center !important;
+  }
+  
+  /* Center product title/heading */
+  #Slider-featured .card__heading {
+    text-align: center !important;
+    width: 100% !important;
+  }
+  
+  /* Center price */
+  #Slider-featured .price {
+    text-align: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+  
+  /* Price container centered */
+  #Slider-featured .price__container {
+    justify-content: center !important;
+    display: flex !important;
+  }
+  
+  /* If there are any price comparison elements */
+  #Slider-featured .price__regular,
+  #Slider-featured .price__sale {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+}
+/* Fix product page layout on mobile */
+@media screen and (max-width: 749px) {
+  /* Add proper spacing at the top of product pages */
+  .template-product .product {
+    padding-top: 30px !important;
+    margin-top: 80px !important; /* Adjust this value as needed */
+  }
+  
+  /* Ensure product media is properly positioned */
+  .product__media-wrapper {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  /* Fix spacing for product info */
+  .product__info-wrapper {
+    margin-top: 10px !important;
+  }
+  
+  /* Ensure the product details have proper spacing */
+  .product__title,
+  .product__description,
+  .product-form {
+    margin-top: 10px !important;
+  }
+}
+/* Universal header fix for mobile */
+@media screen and (max-width: 749px) {
+  /* Fixed header setup for all pages */
+  .announcement-bar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 1001 !important;
+    height: 30px !important;
+  }
+  
+  .header-wrapper {
+    position: fixed !important;
+    top: 30px !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+  }
+  
+  /* Measure the header height and apply it as padding to all pages */
+  #MainContent {
+    padding-top: 170px !important; /* Increased substantially */
+  }
+  
+  /* Exception for homepage and custom home page */
+  body.template-index #MainContent,
+  body.template-page[data-page="home"] #MainContent,
+  #MainContent [data-page="home"],
+  .section[data-page="home"] {
+    padding-top: 0 !important;
+  }
+  
+  /* Override any conflicting styles */
+  body > * {
+    position: relative;
+  }
+  
+  /* Fix for product pages specifically */
+  .template-product .product__media-wrapper,
+  .template-product .product__info-wrapper {
+    margin-top: 0 !important;
+  }
+  
+  /* Fix for collection pages */
+  .template-collection .collection-hero,
+  .template-collection .collection-hero__inner,
+  .template-collection .collection__title {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+/* Move logo 0.3cm to the right on mobile only */
+@media screen and (max-width: 749px) {
+  .header__heading, 
+  .header__heading-link {
+    margin-left: 0.2cm !important;
+    position: relative !important;
+    right: -0.2cm !important;
+  }
+}
+/* Minimal Size Chart for Mobile */
+@media screen and (max-width: 749px) {
+  /* Hide all unnecessary text elements */
+  #size-chart-modal .size-chart-title,
+  .size-chart-title,
+  #size-chart-modal .size-chart-subtitle,
+  .size-chart-subtitle,
+  #size-chart-modal .size-chart-note,
+  .size-chart-note {
+    display: none !important;
+  }
+  
+  /* Make the modal compact */
+  #size-chart-modal.size-chart-modal,
+  .size-chart-modal {
+    max-width: 95% !important;
+    width: 95% !important;
+    max-height: 80vh !important;
+    margin: 10vh auto !important;
+  }
+  
+  /* Minimal padding in content container */
+  #size-chart-modal .size-chart-content,
+  .size-chart-content {
+    padding: 10px 5px !important;
+  }
+  
+  /* Remove any extra margins/padding */
+  #size-chart-modal table.size-chart-table,
+  table.size-chart-table,
+  #size-chart-modal .size-chart-table-container,
+  .size-chart-table-container {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Adjust tabs spacing */
+  #size-chart-modal .size-chart-tabs,
+  .size-chart-tabs {
+    margin: 0 0 10px 0 !important;
+  }
+  
+  /* Make close button smaller and position it better */
+  #size-chart-modal .size-chart-close,
+  .size-chart-close {
+    padding: 5px !important;
+    top: 5px !important;
+    right: 5px !important;
+  }
+  
+  #size-chart-modal .size-chart-close svg,
+  .size-chart-close svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
